@@ -1,9 +1,216 @@
-<!doctype html>
+
 <html>
-<h1>
-What's up?
-</h1>
+<head>
+
+	<title>Daniel Meier</title>
+	<meta name="description" content="My personal website and notes." />
+	<meta name="keywords" content="Daniel Meier" />
+	<meta name="author" content="Daniel Meier" />
+	<meta charset="UTF-8" />
+
+	<style>
+		body {
+			margin: 0px 100px;
+		}
+
+		span:hover {
+			cursor: pointer;
+		}
+
+		/***SEARCH***/
+		.search {
+			margin: 20px 0px;
+			position: relative;
+			line-height: 27px;
+		}
+		#search {
+			width: 200px;
+			line-height: normal;
+		}
+		#clear {
+			padding: 1px 5px;
+			display: inline-block;
+			left: -22px;
+			top: -1px;
+			border: none;
+			text-align: center;
+			vertical-align: middle;
+			position: relative;
+			line-height: normal;
+		}
+		#clear::after {
+			content: "x";
+		}
+		#clear:hover {
+			border: 1px solid black;
+			padding: 0px 4px;
+		}
+		.search span {
+			padding: 2px 4px;
+			border: 1px solid black;
+		}
+		.search span:hover {
+			background: #ccc;
+		}
+
+		/***TIMELINE***/
+		.mainline {
+			border-left: 1px solid black;
+			width: 500px;
+			float: left;
+			margin-right: 50px;
+			padding-left: 15px;
+		}
+		h3 {
+			margin-top: 0px;
+		}
+		h4 {
+			border-top: 1px solid black;
+			margin: 20px 0px 0px 0px;
+			text-indent: 15px;
+			position: relative;
+			left: -15px;
+		}
+		p {
+			margin: 10px 0px 10px 0px;
+		}
+
+		.mainline span {
+			text-decoration: underline;
+		}
+
+		.mainline .hide {
+			display: none;
+			position: absolute;
+			padding: 5px;
+			border: 1px solid black;
+			background: white;
+			max-width: 400px;
+			z-index: 1;
+			text-decoration: none;
+		}
+		.mainline span:hover + .hide{
+			display: inline-block;
+		}
+
+		/***PEOPLE***/
+		.people {
+			width: 300px;
+			float: left;
+			border-left: 1px solid black;
+			padding-left: 15px;
+			margin-right: 50px;
+			float: right;
+		}
+		h5 {
+			border-bottom: 1px solid black;
+			margin: 15px 0px 0px 0px;
+			font-size: 16px;
+		}
+		
+		section {
+
+		}
+		
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script>$(function(){
+		jQuery.expr[':'].contains = function(a, i, m) {
+		  return jQuery(a).text().toUpperCase()
+		      .indexOf(m[3].toUpperCase()) >= 0;
+		};
+
+/*
+		$(".mainline p").each(function(){
+			var str = $(this).text();
+			$(this).text(str.replace("was","is"));
+		});
+*/
+
+		//Take all the people / places / definitions and search for references to these in the timeline. Add the description of these things as alt text. 
+		$(".people h5").each(function(){
+			var name = $(this).text();
+			var desc = $(this).next().text()
+			$(".mainline p").each(function(){
+				var str = $(this).html();
+				//console.log(this);
+				$(this).html(str.replace(name,"<span>"+name+"</span><span class='hide'>"+desc+"</span>"));
+			})
+			//$(".mainline").html($(".mainline").html().replace(re,"<span>"+name+"</span>"));
+		})
+
+	
+
+		//When a tag at the top is clicked, put it in the search bar and search for it.
+		$("span").click(function(){
+			var newSearch = $(this).text();
+			$("#search").val(newSearch);
+			search();
+		})
+
+		//On keyup in the search bar, run the search function.
+		$("#search").keyup(function(){
+			search();
+		});
+
+		//Actual search function
+		function search(){
+			var search = $("#search").val();
+
+			if(search != ''){
+				$("section:not(:contains('"+search+"'))").fadeOut(750);
+				$("section:contains('"+search+"')").fadeIn();
+			}else{
+				$("section").fadeIn();
+			}
+		};
+	});</script>
+</head>
 <body>
-Not much.
+<header>
+	<div class="notes">
+		<p></p>
+	</div>
+	<div class="search">
+		<input id="search" type="text" placeholder="Search" />
+		<span id="clear"></span><br />
+		Key Terms: <span>drawing</span> <span>model</span> <span>film</span> <span>note</span> <span>essay</span>
+		<br />
+
+	</div>
+</header>
+<main>
+	<div class="mainline">
+		<h3>architecture work</h3>
+		<section>
+			<h4>1:50 model of structure for mirrored revolving door proposal</h4>
+			<p>
+			<video width="260" height="480" controls>
+			<source src="mirrored door model1.mp4" type="video/mp4"> 
+			</video>	
+			</p>
+		</section>
+		<section>
+			<h4>aaa</h4>
+			<p>aaa</p>
+		</section>
+		
+	</div>
+	<div class="people">
+		<h3>aaa</h3>
+		<section>
+			<h5>aaa</h5>
+			<p>aaa</p>
+		</section>
+		
+	</div>
+	<div class="people">
+		<h3>aaa</h3>
+		<section>
+			<h5>aaa</h5>
+			<p>aaa</p>
+		</section>
+		
+	</div>
+</main>
 </body>
-</html>
