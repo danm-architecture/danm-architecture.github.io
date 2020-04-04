@@ -102,25 +102,6 @@
 			display: inline-block;
 		}
 
-		/***PEOPLE***/
-		.column2 {
-			width: 100px;
-			float: left;
-			border-left: 1px solid black;
-			padding-left: 15px;
-			margin-right: 50px;
-			float: right;
-		}
-		h5 {
-			border-bottom: 1px solid black;
-			margin: 15px 0px 0px 0px;
-			font-size: 16px;
-		}
-		
-		section {
-
-		}
-		
 	</style>
 	<script src="jquery-3.4.1.min.js"></script>
 	<script>$(function(){
@@ -129,27 +110,9 @@
 		      .indexOf(m[3].toUpperCase()) >= 0;
 		};
 
-/*
-		$(".mainline p").each(function(){
-			var str = $(this).text();
-			$(this).text(str.replace("was","is"));
-		});
-*/
-
-		//Take all the people / places / definitions and search for references to these in the timeline. Add the description of these things as alt text. 
-		$(".people h5").each(function(){
-			var name = $(this).text();
-			var desc = $(this).next().text()
-			$(".mainline p").each(function(){
-				var str = $(this).html();
-				//console.log(this);
-				$(this).html(str.replace(name,"<span>"+name+"</span><span class='hide'>"+desc+"</span>"));
-			})
-			//$(".mainline").html($(".mainline").html().replace(re,"<span>"+name+"</span>"));
-		})
-
-	
-
+			
+			
+			
 		//When a tag at the top is clicked, put it in the search bar and search for it.
 		$("span").click(function(){
 			var newSearch = $(this).text();
@@ -184,28 +147,6 @@
 		<input id="search" type="text" placeholder="Search" />
 		<span id="clear"></span><br />
 		Key Terms: <span>term1</span> <span>term2</span> <span>term3</span> <span>term4</span> <span>term5</span> <span>term6</span> <span>term7</span><br />
-		Key People:
-		<span>1</span>
-		<span>2</span>
-		<span>3</span>
-		<span>4</span>
-		<span>5</span>
-		<span>6</span>
-		<span>6</span>
-		<span>7</span>
-		<span>8</span>
-		<span>9</span>
-		<span>10</span>
-		<span>11</span>
-		<span>12</span>
-		<span>13</span>
-		<span>14</span>
-		<span>15</span>
-		<span>16</span>
-		<span>17</span>
-		<span>18</span>
-		<span>19</span>
-		<span>20</span>
 	</div>
 </header>
 <main>
