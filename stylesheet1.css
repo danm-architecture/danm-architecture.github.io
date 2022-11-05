@@ -1,5 +1,5 @@
 <style>
-
+!important
 
 
   .notes {
@@ -57,6 +57,7 @@
     margin-right: 50px;
     padding-left: 50px;
   }
+
   h2 {
     margin: 0px 0px 0px 0px;
     text-indent: 15px;
