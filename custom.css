@@ -1,4 +1,10 @@
 
+  html * {
+    font-size: 0.98em !important;
+    color: #000;
+    font-family: Helvetica, Arial !important;
+  }
+
   .notes {
     padding: 0px 0px 0px 0px;
   }
@@ -49,7 +55,7 @@
   /***TIMELINE***/
   .mainline {
     border-left: 0px solid black;
-    width: 500px;
+    width: auto;
     float: left;
     margin-right: 50px;
     padding-left: 50px;
@@ -85,7 +91,7 @@
     margin: 0px 0px 20px 0px;
   }
 
-  
+
   .mainline span {
     text-decoration: underline;
   }
