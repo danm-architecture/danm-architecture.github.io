@@ -2,11 +2,13 @@
 <html>
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162755865-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
+
 	  gtag('config', 'UA-162755865-1');
 	</script>
 
@@ -21,6 +23,112 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet1.css">
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 
+<<<<<<< HEAD
+=======
+	<style>
+		body {
+			margin: 0px 100px;
+		}
+
+		span:hover {
+			cursor: pointer;
+		}
+
+		/***SEARCH***/
+		.search {
+			margin: 20px 0px;
+			position: relative;
+			line-height: 27px;
+		}
+		#search {
+			width: 200px;
+			line-height: normal;
+		}
+		#clear {
+			padding: 1px 5px;
+			display: inline-block;
+			left: -22px;
+			top: -1px;
+			border: none;
+			text-align: center;
+			vertical-align: middle;
+			position: relative;
+			line-height: normal;
+		}
+		#clear::after {
+			content: "x";
+		}
+		#clear:hover {
+			border: 1px solid black;
+			padding: 0px 4px;
+		}
+		.search span {
+			padding: 2px 4px;
+			border: 1px solid black;
+		}
+		.search span:hover {
+			background: #ccc;
+		}
+
+		/***TIMELINE***/
+		.mainline {
+			border-left: 0px solid black;
+			width: 500px;
+			float: left;
+			margin-right: 50px;
+			padding-left: 0px;
+		}
+		h3 {
+			margin: 0px 0px 0px 0px;
+			text-indent: 15px;
+			position: relative;
+			left: -15px;
+			color: red;
+			font-size: 1em;
+			font-weight: bold;
+		}
+
+		h2 {
+			margin: 0px 0px 0px 0px;
+			text-indent: 15px;
+			position: relative;
+			left: -15px;
+			color: black;
+			font-size: 1em;
+			font-weight: bold;
+		}
+
+		h4 {
+			border-top: 1px solid black;
+			margin: 0px 0px 0px 0px;
+			text-indent: 15px;
+			padding-top: 15px;
+			position: relative;
+			left: -15px;
+		}
+		p {
+			margin: 0px 0px 20px 0px;
+		}
+
+		.mainline span {
+			text-decoration: underline;
+		}
+
+		.mainline .hide {
+			display: none;
+			position: absolute;
+			padding: 5px;
+			border: 1px solid black;
+			background: white;
+			max-width: 400px;
+			z-index: 1;
+			text-decoration: none;
+		}
+		.mainline span:hover + .hide{
+			display: inline-block;
+		}
+	</style>
+>>>>>>> parent of 32aef2c (split into css , margin mess)
 
 	<script src="jquery-3.4.1.min.js"></script>
 	<script>$(function(){
@@ -61,15 +169,13 @@
 		<br>
 		<br>
 		<h2><img src="images/favicon.png" width="100" height="100" alt=""
-		border="1" img style="padding: 12px 10px 12px 12px"
+		border="1" img style="padding: 14px 10px 12px 12px"
 		align="left">
 		Daniel Meier
 <h3>danielmeier924@gmail.com
 <br>
 <br>
 	</div>
-
-
 	<div class="search">
 		<input id="search" type="text" placeholder="Search" />
 		<span id="clear"></span><br />
@@ -78,9 +184,9 @@
 		-->
 		<span>Writing</span> <span>Projects</span>
 	</div>
-
-
 </header>
+
+
 
 <main>
 	<div class="mainline">
