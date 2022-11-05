@@ -2,7 +2,7 @@
   html * {
     font-size: 0.98em !important;
     color: #000;
-    font-family: Helvetica, Arial !important;
+  font-family: "Lucida Console", "Courier New", monospace;
   }
 
   .notes {
@@ -47,6 +47,7 @@
   .search span {
     padding: 2px 4px;
     border: 1px solid black;
+    color: red;
   }
   .search span:hover {
     background: #ccc;
