@@ -98,14 +98,12 @@
 
 
   .mainline span {
-    padding: 0px 6px !important;
+    padding: 0px 0px !important;
     border: 1px solid black !important;
     color: red !important;
     margin: 0px 0px 0px 0px !important;
     text-indent: 0px !important;
-    position: relative !important;
-    text-align: left !important;
-    float:left !important;
+    display: inline;
   }
 
   .mainline span:hover {
