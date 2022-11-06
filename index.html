@@ -48,7 +48,8 @@
 			var search = $("#search").val();
 
 			if(search != ''){
-				$("section:not(:contains('"+search+"'))").fadeOut(750);
+				$("section:not(:contains('"+search+"'))").css("display", "none");
+				$("#id").css("display", "block");
 				$("section:contains('"+search+"')").fadeIn();
 			}else{
 				$("section").fadeIn();
