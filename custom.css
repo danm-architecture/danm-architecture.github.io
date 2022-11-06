@@ -100,29 +100,16 @@
   .mainline span {
     padding: 2px 4px;
     border: 1px solid black;
-    color: red;
+    color: red !important;
     margin: 0px 0px 0px 0px;
     text-indent: -5px;
     position: relative;
     text-align: left;
     float:left;
   }
-  .mainline .hide {
-    display: none;
-    position: absolute;
-    padding: 5px;
-    border: 1px solid black;
-    background: white;
-    max-width: 400px;
-    z-index: 1;
-    text-decoration: none;
-  }
+
   .mainline span:hover {
     background: #ccc;
-  }
-
-  .mainline span:hover + .hide{
-    display: inline-block;
   }
 
   .col {
