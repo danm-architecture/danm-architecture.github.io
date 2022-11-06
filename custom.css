@@ -61,8 +61,6 @@ text-decoration: none;
   /***TIMELINE***/
   .mainline {
     border-left: 0px solid black;
-    width: auto;
-    float: left;
     margin-right: 50px;
     padding-left: 50px;
   }
@@ -71,7 +69,6 @@ text-decoration: none;
     margin: 0px 0px 0px 0px;
     text-indent: 15px;
     position: relative;
-    text-align: left;
     left: -15px;
     color: black;
     font-size: 1em;
@@ -81,7 +78,6 @@ text-decoration: none;
     margin: 0px 0px 0px 0px;
     text-indent: 15px;
     position: relative;
-    text-align: left;
     left: -15px;
     color: red;
     font-size: 1em;
@@ -93,7 +89,6 @@ text-decoration: none;
     text-indent: 15px;
     padding-top: 0px;
     position: relative;
-    text-align: left;
     left: -15px;
   }
   p {
