@@ -53,6 +53,11 @@
     background: #ccc;
   }
 
+a {
+color: blue;
+text-decoration: none;
+}
+
   /***TIMELINE***/
   .mainline {
     border-left: 0px solid black;
