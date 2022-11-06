@@ -103,11 +103,9 @@
     color: red;
     margin: 0px 0px 0px 0px;
     text-indent: -5px;
-    padding-top: 0px;
     position: relative;
     text-align: left;
     float:left;
-    left: 0px;
   }
   .mainline .hide {
     display: none;
