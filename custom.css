@@ -63,6 +63,7 @@ text-decoration: none;
     border-left: 0px solid black;
     margin-right: 50px;
     padding-left: 50px;
+    float: left;
   }
 
   h2 {
