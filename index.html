@@ -49,7 +49,7 @@
 
 			if(search != ''){
 				$("section:not(:contains('"+search+"'))").css("display", "none");
-				$("#id").css("display", "block");
+				$("#id").css("display", "none");
 				$("section:contains('"+search+"')").fadeIn();
 			}else{
 				$("section").fadeIn();
