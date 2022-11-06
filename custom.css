@@ -5,7 +5,6 @@
   font-family: "Lucida Console", "Courier New", "monospace";
   }
 
-
   .notes {
     padding: 0px 0px 0px 0px;
   }
@@ -87,7 +86,7 @@
     border-top: 0px solid black;
     margin: 0px 0px 0px 0px;
     text-indent: 15px;
-    padding-top: 15px;
+    padding-top: 0px;
     position: relative;
     text-align: left;
     left: -15px;
@@ -99,7 +98,16 @@
 
 
   .mainline span {
-    text-decoration: underline;
+    padding: 2px 4px;
+    border: 1px solid black;
+    color: red;
+    margin: 0px 0px 0px 0px;
+    text-indent: -5px;
+    padding-top: 0px;
+    position: relative;
+    text-align: left;
+    float:left;
+    left: 0px;
   }
   .mainline .hide {
     display: none;
@@ -111,6 +119,10 @@
     z-index: 1;
     text-decoration: none;
   }
+  .mainline span:hover {
+    background: #ccc;
+  }
+
   .mainline span:hover + .hide{
     display: inline-block;
   }
