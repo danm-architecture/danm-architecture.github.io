@@ -1,6 +1,6 @@
 
   html * {
-    font-size: 0.98em !important;
+    font-size: 0.97em;
     color: #000;
   font-family: "Lucida Console", "Courier New", "monospace";
   }
@@ -21,6 +21,7 @@
     margin: 20px 0px;
     position: relative;
     line-height: 27px;
+    font-size: 0.9em !important;
   }
   #search {
     width: 200px;
@@ -48,6 +49,8 @@
     padding: 2px 4px;
     border: 1px solid black;
     color: red;
+
+
   }
   .search span:hover {
     background: #ccc;
