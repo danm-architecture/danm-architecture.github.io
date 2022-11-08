@@ -48,11 +48,11 @@
 			var search = $("#search").val();
 
 			if(search != ''){
-				$("section:not(:contains('"+search+"'))").css("float","Right");
+				$("section:not(:contains('"+search+"'))").addClass('col order-last');
 				$("section:not(:contains('"+search+"'))").css("display","none");
-				$("section:contains('"+search+"')").fadeIn();
+				$("section:contains('"+search+"')").css("display","inline");
 			}else{
-				$("section").fadeIn();
+				$("section").css("display","inline");
 			}
 		};
 	});</script>
