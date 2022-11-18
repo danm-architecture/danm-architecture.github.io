@@ -138,7 +138,7 @@ text-decoration: none;
   transform-style: preserve-3d;
   text-align:right;
   display: inline;
-  float: right;
+  float: left;
   margin: 0px 100px 0px 0px;
   text-indent: 0px;
   position: relative;
