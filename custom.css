@@ -129,3 +129,29 @@ text-decoration: none;
     background: url("images/orc2.png") no-repeat;
     background-size:contain;
 }
+
+#spinner {
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  transform-style: preserve-3d;
+  text-align:right;
+  display: inline;
+  float: right;
+  margin: 0px 0px 0px 0px;
+  text-indent: 0px;
+  position: relative;
+  left: 0px;
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+}
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
