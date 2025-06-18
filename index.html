@@ -48,10 +48,16 @@
 			var search = $("#search").val();
 
 			if(search != ''){
-				$("section:not(:contains('"+search+"'))").css("display","none");
-				$("section:contains('"+search+"')").css("display","block");
+				$(".col").each(function(){
+					var section = $(this).find("section");
+					if(section.text().toUpperCase().indexOf(search.toUpperCase()) >= 0){
+						$(this).show();
+					} else {
+						$(this).hide();
+					}
+				});
 			}else{
-				$("section").css("display","block");
+				$(".col").show();
 			}
 		};
 	});</script>
